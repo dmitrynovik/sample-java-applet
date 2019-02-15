@@ -1,3 +1,2 @@
 Manifest-Version: 1.0.1
-Class-Path: config/
 Main-class: com.javacodegeeks.App
