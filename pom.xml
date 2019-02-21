@@ -16,7 +16,7 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-  		<dependency>
+  	<dependency>
 		    <groupId>org.apache.logging.log4j</groupId>
 		    <artifactId>log4j-api</artifactId>
 		    <version>2.11.2</version>
@@ -26,11 +26,11 @@
 		    <artifactId>log4j-core</artifactId>
 		    <version>2.11.2</version>
 		  </dependency>
-				<dependency>
+			<dependency>
 				    <groupId>com.fasterxml.jackson.core</groupId>
 				    <artifactId>jackson-databind</artifactId>
 				    <version>2.9.8</version>
-				</dependency>				
+			</dependency>				
 	<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
 	<dependency>
   	  <groupId>com.fasterxml.jackson.dataformat</groupId>
@@ -49,7 +49,11 @@
 <build>
 		<!-- <resources>
 			<resource>
-				<directory>config</directory>
+				<directory>config</directory>				
+				<includes>
+					<include>*.*</include>
+				</includes>
+				<targetPath>${project.build.directory}/classes</targetPath>
 			</resource>
 		</resources> -->
 		<plugins>

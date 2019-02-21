@@ -1,3 +1,4 @@
+/*
 package com.javacodegeeks;
 
 import java.net.URI;
@@ -20,23 +21,23 @@ import javax.servlet.Servlet;
 import javax.script.ScriptEngineFactory;
 
 @Plugin(name = "CustomConfigurationFactory", category = ConfigurationFactory.CATEGORY)
-@Order(150)
+@Order(-200)
 public class CustomConfigurationFactory extends ConfigurationFactory {
 
     static Configuration createConfiguration(final String name, ConfigurationBuilder<BuiltConfiguration> builder) {
         builder.setConfigurationName(name);
         //builder.setStatusLevel(Level.ERROR);
         //builder.add(builder.newFilter("ThresholdFilter", Filter.Result.ACCEPT, Filter.Result.NEUTRAL).addAttribute("level", Level.DEBUG));
-        AppenderComponentBuilder appenderBuilder = builder.newAppender("Stdout", "CONSOLE").addAttribute("target", ConsoleAppender.Target.SYSTEM_OUT);
-        appenderBuilder
-            .add(builder.newLayout("PatternLayout")
-            .addAttribute("pattern", "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"));
-        //appenderBuilder.add(builder.newFilter("MarkerFilter", Filter.Result.DENY, Filter.Result.NEUTRAL).addAttribute("marker", "FLOW"));
-        builder.add(appenderBuilder);
+        // AppenderComponentBuilder appenderBuilder = builder.newAppender("Stdout", "CONSOLE").addAttribute("target", ConsoleAppender.Target.SYSTEM_OUT);
+        // appenderBuilder
+        //     .add(builder.newLayout("PatternLayout")
+        //     .addAttribute("pattern", "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"));
+        // //appenderBuilder.add(builder.newFilter("MarkerFilter", Filter.Result.DENY, Filter.Result.NEUTRAL).addAttribute("marker", "FLOW"));
+        // builder.add(appenderBuilder);
 
-        builder
-            .add(builder.newRootLogger(Level.ERROR)
-            .add(builder.newAppenderRef("Stdout")));
+        // builder
+        //     .add(builder.newRootLogger(Level.ERROR)
+        //     .add(builder.newAppenderRef("Stdout")));
 
         return builder.build();
     }
@@ -57,3 +58,4 @@ public class CustomConfigurationFactory extends ConfigurationFactory {
         return new String[] {"*"};
     }
 }
+*/
