@@ -2,7 +2,7 @@ taskkill -F -IM 7zFM.exe
 clear
 
 set -e
-mvn clean install
+mvn install
 set +e
 
 taskkill -F -IM iexplore.exe
